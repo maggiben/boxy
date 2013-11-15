@@ -1,0 +1,74 @@
+html, body {
+    height: 100%;
+}
+body {
+    background-color: rgb(34, 45, 58);
+}
+.world {
+    background-image: linear-gradient(0deg, transparent 0%, transparent 9px, rgba(255, 255, 255, 0.2) 9px, rgba(255, 255, 255, 0.2) 10px, transparent 10px, transparent 19px, rgba(255, 255, 255, 0.1) 19px, rgba(255, 255, 255, 0.1) 20px, transparent 20px, transparent 29px, rgba(255, 255, 255, 0.1) 29px, rgba(255, 255, 255, 0.1) 30px, transparent 30px, transparent 39px, rgba(255, 255, 255, 0.1) 39px, rgba(255, 255, 255, 0.1) 40px, transparent 40px, transparent 49px, rgba(255, 255, 255, 0.1) 49px, rgba(255, 255, 255, 0.1) 50px), linear-gradient(-90deg, transparent 0%, transparent 9px, rgba(255, 255, 255, 0.2) 9px, rgba(255, 255, 255, 0.2) 10px, transparent 10px, transparent 19px, rgba(255, 255, 255, 0.2) 19px, rgba(255, 255, 255, 0.1) 20px, transparent 20px, transparent 29px, rgba(255, 255, 255, 0.1) 29px, rgba(255, 255, 255, 0.1) 30px, transparent 30px, transparent 39px, rgba(255, 255, 255, 0.1) 39px, rgba(255, 255, 255, 0.1) 40px, transparent 40px, transparent 49px, rgba(255, 255, 255, 0.1) 49px, rgba(255, 255, 255, 0.1) 50px);
+    background-size: 50px 50px;
+    background-color: #5588cc;
+}
+.world {
+    position: absolute;
+    width:600px;
+    height:400px;
+    top: 50%;
+    left: 50%;
+    border: 10px solid rgba(255,255,255, 0.85);
+    margin: -200px 0 0 -300px;
+    border-radius: 2px;
+    float: left;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.85);
+}
+h1, h5 {
+    color: rgba(255,255,255, 0.75);
+    text-align: center;
+    font-family: 'Helvetica Neue'
+}
+
+            #canvas {
+    padding:0;
+    margin:0 auto;
+    cursor:crosshair;
+}
+
+#CONTAINER {
+    margin:0 auto;
+  text-align:center;
+}
+
+.key {
+    border-bottom:1px solid #555;
+}
+
+.ball {
+    fill: #ffffff;
+    stroke: #f00;
+    fill-opacity: 0.5;
+    stroke: #fff;
+    strokeWidth: 1;
+}
+.box {
+    fill: #3FB247;
+    stroke: #f00;
+    fill-opacity: 0.5;
+    stroke: #fff;
+    strokeWidth: 1;
+}
+.ballHovering {
+    fill:#f99;
+}
+
+.poly {
+    fill:#fff;
+    fill-opacity: 0.25;
+    stroke: #fff;
+    strokeWidth: 10;
+    stroke-opacity:0.5;
+    //stroke-dasharray: 1,1
+}
+
+.polyHovering{
+fill:#5f5;
+}
