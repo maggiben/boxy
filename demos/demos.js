@@ -114,13 +114,13 @@ jQuery(window).load(function () {
             fixedRotation: 1,
             fixed: false
         });
-        x1 = world2d.addFixture(pendulum);
+        x1 = wx.addFixture(pendulum);
 
         var jointDef = new b2RevoluteJointDef();
         jointDef.body1 = x1;
-        jointDef.body2 = world2d.world.GetGroundBody();
+        jointDef.body2 = wx.world.GetGroundBody();
         jointDef.anchorPoint = x1.GetCenterPosition();
-        world2d.world.CreateJoint(jointDef);
+        wx.world.CreateJoint(jointDef);
 
         floor = ctx.rect(0, 390, 600, 10).attr({
             class: 'box',
@@ -132,11 +132,27 @@ jQuery(window).load(function () {
             fixedRotation: 1,
             fixed: true
         });
-        world2d.addFixture(floor);
+        wx.addFixture(floor);
+
+
+        for(var i = 0; i < 600; i += 50) {
+            poly = ctx.polygon([[i + 20, 150], [i + 30, 170], [i + 10, 170]]).attr({
+                class: 'box',
+            }).physics({
+                density: 0.3,
+                friction: 0.5,
+                restitution: 0.9,
+                isSensor: 0,
+                fixedRotation: 1,
+                fixed: true
+            });
+            wx.addFixture(poly);
+        }
+
         wx.run();
         setTimeout(function(){
             window.isStopped = true;
-        },1500)
+        },5000)
     });
 });
 
